@@ -92,8 +92,8 @@ class TownActivity : AppCompatActivity() {
             val dayIndex = LocalDate.parse(
                 elem.getString("dt_txt"),
                 DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
-            ).dayOfWeek.value
-            val todayIndex = LocalDate.now().dayOfWeek.value
+            ).dayOfWeek.value-1
+            val todayIndex = LocalDate.now().dayOfWeek.value-1
 
             val day: String
             if (dayIndex == todayIndex)
